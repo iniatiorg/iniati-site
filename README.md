@@ -2,6 +2,15 @@
 
 Site estático em React, Vite e Bootstrap 5. Não utiliza servidor, SSR, banco de dados ou APIs próprias.
 
+## Mise
+
+Instale o [Mise](https://github.com/mise-install/mise) e execute os comandos abaixo para instalar as dependências do projeto.
+
+```bash
+mise trust
+mise install
+```
+
 ## Desenvolvimento
 
 Requer Node.js 22.13 ou superior.
