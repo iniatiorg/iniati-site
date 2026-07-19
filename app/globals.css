@@ -84,22 +84,23 @@ a { color: inherit; }
 .hero-index i { width: 5px; height: 5px; border-radius: 50%; background: var(--lime); }
 .hero-bottom-line { position: absolute; bottom: 0; left: 0; right: 0; height: 12px; background: var(--petrol); }
 
-.innovation-orbit { position: relative; width: min(42vw, 560px); aspect-ratio: 1; margin-left: auto; }
-.orbit { position: absolute; border: 2px solid var(--emerald); border-radius: 50%; }
-.orbit-one { inset: 14% 5% 10% 18%; transform: rotate(20deg); }
-.orbit-two { inset: 24% 15% 4% 10%; border-color: var(--coral); opacity: .8; transform: rotate(-36deg); }
-.orbit-core { position: absolute; inset: 24% 8% 8% 27%; border-radius: 48% 52% 44% 56%; background: var(--petrol); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 25px 70px rgba(11,77,85,.24); }
-.orbit-core::before { content: ""; position: absolute; width: 42%; aspect-ratio: 1; border-radius: 50%; background: var(--lime); left: 24%; top: 16%; }
-.orbit-core span, .orbit-core strong { z-index: 1; text-transform: uppercase; letter-spacing: .12em; }
-.orbit-core span { color: var(--lime); font-size: .72rem; margin-top: 24%; }
-.orbit-core strong { font-size: 1.4rem; }
-.orbit-dot { position: absolute; border-radius: 50%; }
-.dot-one { width: 58px; height: 58px; background: var(--emerald); top: 5%; right: 24%; }
-.dot-two { width: 70px; height: 70px; background: var(--coral); right: 2%; bottom: 16%; }
-.dot-three { width: 20px; height: 20px; background: var(--lime); left: 13%; top: 42%; }
-.partner-note { position: absolute; right: 0; bottom: 4%; max-width: 260px; padding: 1.25rem; border-radius: 1.4rem; background: var(--form-bg); border: 1px solid rgba(255,255,255,.45); box-shadow: 0 18px 45px rgba(10,49,84,.12); backdrop-filter: blur(14px); display: grid; gap: .35rem; }
-.partner-note small { color: var(--emerald); font-size: .62rem; letter-spacing: .13em; font-weight: 700; }
-.partner-note b { font-size: .85rem; color: var(--ink); }
+.research-matrix { width: min(37vw, 510px); aspect-ratio: .88; margin-left: auto; color: #fff; background-color: var(--petrol); background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 20% 20%; border: 1px solid rgba(255,255,255,.15); box-shadow: 0 30px 70px rgba(10,49,84,.18); display: grid; grid-template-rows: auto 1fr auto auto; position: relative; }
+.research-matrix::before { content: ""; position: absolute; width: 4px; top: 0; bottom: 0; left: 0; background: var(--lime); }
+.matrix-meta { display: flex; justify-content: space-between; padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,.22); color: rgba(255,255,255,.62); font-size: .58rem; font-weight: 700; letter-spacing: .17em; }
+.matrix-main { padding: clamp(2rem, 4vw, 3.5rem) 1.5rem 2rem; display: flex; flex-direction: column; justify-content: flex-end; }
+.matrix-main > span { color: var(--lime); font-size: .65rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.matrix-main strong { font-family: "Manrope", sans-serif; font-size: clamp(5.5rem, 9vw, 8.5rem); line-height: .92; letter-spacing: -.09em; margin: .6rem 0 1rem; }
+.matrix-main p { color: rgba(255,255,255,.7); line-height: 1.55; margin: 0; }
+.matrix-axis { border-top: 1px solid rgba(255,255,255,.22); border-bottom: 1px solid rgba(255,255,255,.22); }
+.matrix-axis div { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .8rem; padding: .62rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,.12); }
+.matrix-axis div:last-child { border-bottom: 0; }
+.matrix-axis span, .matrix-axis b { font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; }
+.matrix-axis span { color: rgba(255,255,255,.74); }
+.matrix-axis b { color: var(--lime); }
+.matrix-axis i { height: 1px; background: rgba(255,255,255,.24); }
+.matrix-signature { padding: 1.15rem 1.5rem; background: rgba(255,255,255,.05); display: grid; gap: .3rem; }
+.matrix-signature small { color: var(--lime); font-size: .56rem; letter-spacing: .15em; font-weight: 700; }
+.matrix-signature b { color: #fff; font-size: .76rem; letter-spacing: .04em; }
 
 .display-title { font-family: "Manrope", sans-serif; font-size: clamp(2.45rem, 4.6vw, 5.1rem); line-height: 1.02; letter-spacing: -.06em; margin: 1rem 0; }
 .lead-copy { font-family: "Manrope", sans-serif; font-size: clamp(1.25rem, 2vw, 1.7rem); line-height: 1.55; letter-spacing: -.025em; }

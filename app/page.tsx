@@ -137,14 +137,19 @@ export default function Home() {
               </div>
             </div>
             <div className="col-lg-5 d-none d-lg-block" aria-hidden="true">
-              <div className="innovation-orbit">
-                <div className="orbit orbit-one" />
-                <div className="orbit orbit-two" />
-                <div className="orbit-core"><span>ideia</span><strong>impacto</strong></div>
-                <div className="orbit-dot dot-one" />
-                <div className="orbit-dot dot-two" />
-                <div className="orbit-dot dot-three" />
-                <div className="partner-note"><small>CONHECIMENTO EM MOVIMENTO</small><b>ciência · tecnologia · mercado</b></div>
+              <div className="research-matrix">
+                <div className="matrix-meta"><span>INIATI / 01</span><span>ICT · BRASIL</span></div>
+                <div className="matrix-main">
+                  <span>Pesquisa e desenvolvimento</span>
+                  <strong>PD&amp;I</strong>
+                  <p>Da investigação científica<br />à aplicação tecnológica.</p>
+                </div>
+                <div className="matrix-axis">
+                  <div><span>Pesquisa</span><i /><b>01</b></div>
+                  <div><span>Engenharia</span><i /><b>02</b></div>
+                  <div><span>Mercado</span><i /><b>03</b></div>
+                </div>
+                <div className="matrix-signature"><small>COMPETÊNCIAS CONECTADAS</small><b>ciência · engenharia · mercado</b></div>
               </div>
             </div>
           </div>
