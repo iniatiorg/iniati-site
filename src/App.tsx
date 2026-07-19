@@ -1,6 +1,7 @@
-"use client";
+import { useEffect, useState } from "react";
+import type { FormEvent } from "react";
 
-import { FormEvent, useEffect, useState } from "react";
+const logoUrl = `${import.meta.env.BASE_URL}iniati-logo.webp`;
 
 const areas = [
   {
@@ -58,24 +59,22 @@ function composeMailto(form: HTMLFormElement, kind: "contact" | "career") {
   return `mailto:contato@iniati.org.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
 }
 
-export default function Home() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+export default function App() {
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    const saved = localStorage.getItem("iniati-theme");
+    if (saved === "dark" || saved === "light") return saved;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  });
   const [menuOpen, setMenuOpen] = useState(false);
   const [sentForm, setSentForm] = useState<"contact" | "career" | null>(null);
 
   useEffect(() => {
-    const saved = localStorage.getItem("iniati-theme");
-    const initial = saved === "dark" || saved === "light"
-      ? saved
-      : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    setTheme(initial);
-    document.documentElement.setAttribute("data-bs-theme", initial);
-  }, []);
+    document.documentElement.setAttribute("data-bs-theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     const next = theme === "light" ? "dark" : "light";
     setTheme(next);
-    document.documentElement.setAttribute("data-bs-theme", next);
     localStorage.setItem("iniati-theme", next);
   };
 
@@ -92,7 +91,7 @@ export default function Home() {
       <nav className="navbar navbar-expand-xl fixed-top site-nav" aria-label="Navegação principal">
         <div className="container-xxl px-3 px-lg-4">
           <a className="navbar-brand brand-link" href="#inicio" onClick={closeMenu} aria-label="INIATI — início">
-            <img className="brand-logo" src="/iniati-logo.webp" alt="INIATI" width="220" height="66" fetchPriority="high" />
+            <img className="brand-logo" src={logoUrl} alt="INIATI" width="220" height="66" fetchPriority="high" />
             <span className="brand-name d-none d-sm-block">Instituto Nacional de Inovação Aplicada<br />à Tecnologia da Informação</span>
           </a>
 
@@ -364,7 +363,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="container-xxl px-3 px-lg-4">
           <div className="row g-4 align-items-start">
-            <div className="col-lg-5"><a className="footer-brand" href="#inicio"><img className="brand-logo" src="/iniati-logo.webp" alt="INIATI" width="220" height="66" loading="lazy" /></a><p>Instituto Nacional de Inovação Aplicada à Tecnologia da Informação.</p></div>
+            <div className="col-lg-5"><a className="footer-brand" href="#inicio"><img className="brand-logo" src={logoUrl} alt="INIATI" width="220" height="66" loading="lazy" /></a><p>Instituto Nacional de Inovação Aplicada à Tecnologia da Informação.</p></div>
             <div className="col-6 col-lg-2 offset-lg-1"><h3>Navegue</h3><a href="#instituto">O Instituto</a><a href="#atuacao">Atuação</a><a href="#valores">Valores</a><a href="#clientes">Clientes</a><a href="#projetos">Projetos</a></div>
             <div className="col-6 col-lg-2"><h3>Conecte-se</h3><a href="#contato">Fale conosco</a><a href="#trabalhe">Trabalhe conosco</a><a href="mailto:contato@iniati.org.br">E-mail</a></div>
             <div className="col-lg-2"><h3>Atuação</h3><p>Centro-Oeste<br />Brasil</p></div>
