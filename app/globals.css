@@ -146,6 +146,40 @@ a { color: inherit; }
 .client-link strong span { font-weight: 500; }
 .client-link i { font-style: normal; position: absolute; right: 1.4rem; bottom: 1.3rem; }
 
+.projects-section { padding-top: 0; }
+.project-feature { border: 1px solid var(--line); background: var(--paper); box-shadow: 0 24px 60px rgba(10,49,84,.08); overflow: hidden; }
+.project-copy { padding: clamp(2rem, 5vw, 4.5rem); }
+.project-status { display: flex; align-items: center; gap: .65rem; color: var(--emerald); font-size: .66rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.project-status i { width: 7px; height: 7px; border-radius: 50%; background: var(--emerald); box-shadow: 0 0 0 5px rgba(8,125,97,.1); }
+.project-brand { display: flex; align-items: center; gap: 1rem; margin: 2.5rem 0 .5rem; }
+.project-brand > b { width: 48px; height: 48px; display: grid; place-items: center; color: #fff; background: var(--petrol); font-family: "Manrope", sans-serif; font-size: 1.35rem; }
+.project-brand > strong { font-family: "Manrope", sans-serif; font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1; letter-spacing: -.06em; }
+.project-type { color: var(--emerald); font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
+.project-copy h3 { max-width: 650px; margin: 2rem 0 1rem; font-family: "Manrope", sans-serif; font-size: clamp(2rem, 3.4vw, 3.35rem); line-height: 1.05; letter-spacing: -.055em; }
+.project-description { max-width: 680px; color: var(--ink-soft); font-size: 1.02rem; line-height: 1.75; }
+.project-description em { color: var(--ink); font-style: normal; font-weight: 700; }
+.project-capabilities { display: flex; flex-wrap: wrap; gap: .55rem; margin: 1.7rem 0 2rem; }
+.project-capabilities span { padding: .48rem .8rem; border: 1px solid var(--line); color: var(--ink-soft); font-size: .72rem; font-weight: 600; }
+.regulus-panel { min-height: 620px; color: #fff; background-color: var(--petrol); background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px); background-size: 25% 20%; display: grid; grid-template-rows: auto 1fr auto auto; }
+.regulus-panel-head { display: flex; justify-content: space-between; padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,.2); font-size: .57rem; letter-spacing: .14em; }
+.regulus-panel-head span { color: rgba(255,255,255,.62); }
+.regulus-panel-head b { color: var(--lime); }
+.regulus-panel-body { padding: clamp(2rem, 4vw, 3.5rem) 1.5rem; display: flex; flex-direction: column; justify-content: center; }
+.regulus-panel-body small { color: var(--lime); font-size: .62rem; font-weight: 700; letter-spacing: .16em; }
+.regulus-panel-body strong { margin: .75rem 0 2.5rem; font-family: "Manrope", sans-serif; font-size: clamp(3rem, 5vw, 5rem); line-height: .96; letter-spacing: -.065em; }
+.regulus-bars { display: grid; gap: .65rem; }
+.regulus-bars i { display: block; height: 7px; background: rgba(255,255,255,.16); border-left: 4px solid var(--lime); }
+.regulus-bars i:nth-child(1) { width: 84%; }
+.regulus-bars i:nth-child(2) { width: 62%; }
+.regulus-bars i:nth-child(3) { width: 94%; }
+.regulus-bars i:nth-child(4) { width: 48%; }
+.regulus-panel-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); }
+.regulus-panel-grid div { min-width: 0; padding: 1.15rem .8rem; border-right: 1px solid rgba(255,255,255,.16); display: grid; gap: .35rem; }
+.regulus-panel-grid div:last-child { border-right: 0; }
+.regulus-panel-grid span { color: var(--lime); font-size: .56rem; letter-spacing: .14em; }
+.regulus-panel-grid b { overflow-wrap: anywhere; font-size: .7rem; letter-spacing: .04em; }
+.regulus-panel-foot { padding: 1.1rem 1.5rem; color: rgba(255,255,255,.65); font-size: .56rem; letter-spacing: .16em; }
+
 .careers-section { background: var(--cream-deep); }
 .career-note { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--coral); }
 .career-note span { color: var(--emerald); font-size: .68rem; letter-spacing: .15em; font-weight: 700; text-transform: uppercase; }
@@ -190,6 +224,7 @@ a { color: inherit; }
   .hero-section .min-vh-100 { min-height: auto !important; padding-top: 7rem !important; padding-bottom: 7rem !important; }
   .hero-copy h1 { max-width: 760px; }
   .method-step { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+  .regulus-panel { min-height: 520px; }
 }
 
 @media (max-width: 575.98px) {

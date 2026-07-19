@@ -115,6 +115,7 @@ export default function Home() {
               <li className="nav-item"><a className="nav-link" href="#metodo" onClick={closeMenu}>Como fazemos</a></li>
               <li className="nav-item"><a className="nav-link" href="#valores" onClick={closeMenu}>Valores</a></li>
               <li className="nav-item"><a className="nav-link" href="#clientes" onClick={closeMenu}>Clientes</a></li>
+              <li className="nav-item"><a className="nav-link" href="#projetos" onClick={closeMenu}>Projetos</a></li>
               <li className="nav-item"><a className="nav-link" href="#contato" onClick={closeMenu}>Contato</a></li>
             </ul>
           </div>
@@ -257,6 +258,54 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="projetos" className="section-pad projects-section section-anchor">
+        <div className="container-xxl px-3 px-lg-4">
+          <div className="row align-items-end mb-5">
+            <div className="col-lg-7">
+              <div className="section-label">Projetos INIATI</div>
+              <h2 className="display-title mb-0">Tecnologia aplicada a desafios públicos.</h2>
+            </div>
+            <div className="col-lg-4 offset-lg-1 mt-3 mt-lg-0"><p className="body-copy mb-0">Conheça soluções desenvolvidas pelo Instituto e já disponíveis para uso.</p></div>
+          </div>
+
+          <article className="project-feature">
+            <div className="row g-0 align-items-stretch">
+              <div className="col-lg-7">
+                <div className="project-copy h-100">
+                  <div className="project-status"><span>Projeto disponível</span><i aria-hidden="true" /></div>
+                  <div className="project-brand"><b>R</b><strong>Regulus</strong></div>
+                  <p className="project-type">Plataforma de Análise Regulatória</p>
+                  <h3>Decisões regulatórias orientadas por evidências.</h3>
+                  <p className="project-description">O Regulus é uma plataforma do INIATI baseada no <em>Standard Cost Model</em>. A solução apoia a estruturação e a análise de obrigações e custos regulatórios, contribuindo para avaliações mais claras, consistentes e documentadas.</p>
+                  <div className="project-capabilities" aria-label="Recursos do Regulus">
+                    <span>Inventário regulatório</span>
+                    <span>Análise de custos</span>
+                    <span>Comparação de cenários</span>
+                  </div>
+                  <a href="https://regulus.iniati.org.br/" target="_blank" rel="noreferrer" className="btn btn-primary btn-lg">Acessar o Regulus <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <div className="col-lg-5">
+                <div className="regulus-panel h-100" aria-hidden="true">
+                  <div className="regulus-panel-head"><span>REGULUS / SCM</span><b>ANÁLISE 01</b></div>
+                  <div className="regulus-panel-body">
+                    <small>MODELO DE ANÁLISE</small>
+                    <strong>Standard<br />Cost Model</strong>
+                    <div className="regulus-bars"><i /><i /><i /><i /></div>
+                  </div>
+                  <div className="regulus-panel-grid">
+                    <div><span>01</span><b>Obrigações</b></div>
+                    <div><span>02</span><b>Custos</b></div>
+                    <div><span>03</span><b>Evidências</b></div>
+                  </div>
+                  <div className="regulus-panel-foot">METODOLOGIA · DADOS · DECISÃO</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section id="trabalhe" className="section-pad careers-section section-anchor">
         <div className="container-xxl px-3 px-lg-4">
           <div className="row g-5">
@@ -316,7 +365,7 @@ export default function Home() {
         <div className="container-xxl px-3 px-lg-4">
           <div className="row g-4 align-items-start">
             <div className="col-lg-5"><a className="footer-brand" href="#inicio"><img className="brand-logo" src="/iniati-logo.webp" alt="INIATI" width="220" height="66" loading="lazy" /></a><p>Instituto Nacional de Inovação Aplicada à Tecnologia da Informação.</p></div>
-            <div className="col-6 col-lg-2 offset-lg-1"><h3>Navegue</h3><a href="#instituto">O Instituto</a><a href="#atuacao">Atuação</a><a href="#valores">Valores</a><a href="#clientes">Clientes</a></div>
+            <div className="col-6 col-lg-2 offset-lg-1"><h3>Navegue</h3><a href="#instituto">O Instituto</a><a href="#atuacao">Atuação</a><a href="#valores">Valores</a><a href="#clientes">Clientes</a><a href="#projetos">Projetos</a></div>
             <div className="col-6 col-lg-2"><h3>Conecte-se</h3><a href="#contato">Fale conosco</a><a href="#trabalhe">Trabalhe conosco</a><a href="mailto:contato@iniati.org.br">E-mail</a></div>
             <div className="col-lg-2"><h3>Atuação</h3><p>Centro-Oeste<br />Brasil</p></div>
           </div>
