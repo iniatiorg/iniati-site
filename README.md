@@ -26,10 +26,24 @@ npm run dev
 npm run build
 ```
 
-O resultado é gravado em `dist/`. Essa pasta contém apenas HTML, CSS, JavaScript e imagens e pode ser hospedada em qualquer servidor de arquivos estáticos.
+O resultado é gravado em `docs/`. Essa pasta contém apenas HTML, CSS, JavaScript e imagens e é versionada no repositório para publicação direta pelo GitHub Pages.
 
 ## GitHub Pages
 
-O workflow `.github/workflows/deploy-pages.yml` gera e publica o site automaticamente quando há um push na branch `main`.
+O site não depende de GitHub Actions. O GitHub Pages publica os arquivos pré-compilados presentes em `docs/`.
 
-No repositório do GitHub, acesse **Settings → Pages** e escolha **GitHub Actions** em **Source**. Depois disso, cada push para `main` publica uma nova versão.
+No repositório do GitHub, acesse **Settings → Pages**, escolha **Deploy from a branch** e configure:
+
+- Branch: `main`
+- Pasta: `/docs`
+
+Para publicar uma atualização:
+
+```bash
+npm ci
+npm run lint
+npm run build
+git add docs
+git commit -m "Atualiza site publicado"
+git push origin main
+```
