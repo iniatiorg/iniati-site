@@ -26,24 +26,32 @@ npm run dev
 npm run build
 ```
 
-O resultado é gravado em `docs/`. Essa pasta contém apenas HTML, CSS, JavaScript e imagens e é versionada no repositório para publicação direta pelo GitHub Pages.
+O resultado é gravado em `dist/`. Essa pasta contém apenas HTML, CSS, JavaScript e imagens e pode ser publicada em qualquer servidor de arquivos estáticos.
 
-## GitHub Pages
+## Publicação automática no GitHub Pages
 
-O site não depende de GitHub Actions. O GitHub Pages publica os arquivos pré-compilados presentes em `docs/`.
+O workflow `.github/workflows/deploy-pages.yml` compila e publica o site automaticamente quando há um push na branch `main`.
 
-No repositório do GitHub, acesse **Settings → Pages**, escolha **Deploy from a branch** e configure:
+No repositório do GitHub, acesse **Settings → Pages** e escolha **GitHub Actions** em **Source**. Depois disso, cada push para `main` executará:
 
-- Branch: `main`
-- Pasta: `/docs`
+- instalação das dependências com `npm ci`;
+- compilação estática com `npm run build`;
+- publicação do conteúdo de `dist/` no GitHub Pages.
 
-Para publicar uma atualização:
+## Compilação local sem GitHub Actions
+
+Para compilar e validar o site localmente:
 
 ```bash
 npm ci
 npm run lint
 npm run build
-git add docs
-git commit -m "Atualiza site publicado"
-git push origin main
+```
+
+Os arquivos prontos ficarão em `dist/`. Eles podem ser copiados diretamente para qualquer hospedagem estática, sem Node.js ou processo de servidor no ambiente de produção.
+
+Para conferir localmente a versão compilada:
+
+```bash
+npm run preview
 ```
