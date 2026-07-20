@@ -55,3 +55,5 @@ Para conferir localmente a versão compilada:
 ```bash
 npm run preview
 ```
+
+No repositório do GitHub, acesse **Settings → Pages** e escolha **Deploy from a branch**, e no diretório, escolha `/dist`. Depois disso, cada push para `main` publicará automaticamente o conteúdo de `dist/` no GitHub Pages.
