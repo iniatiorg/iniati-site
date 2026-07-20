@@ -119,6 +119,26 @@ a { color: inherit; }
 .tag-list { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
 .tag-list span { padding: .45rem .75rem; border: 1px solid var(--line); border-radius: 999px; font-size: .72rem; font-weight: 600; }
 
+.incentives-section { position: relative; color: #fff; background-color: #075f50; background-image: linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px); background-size: 72px 72px; overflow: hidden; }
+[data-bs-theme="dark"] .incentives-section { background-color: #092d32; }
+.incentives-section::before { content: "PD&I"; position: absolute; right: -1.5rem; margin-top: -7rem; color: rgba(255,255,255,.035); font-family: "Manrope", sans-serif; font-size: clamp(9rem, 24vw, 25rem); font-weight: 700; letter-spacing: -.1em; line-height: 1; pointer-events: none; }
+.incentives-intro { position: relative; z-index: 1; }
+.incentives-label { color: var(--lime); }
+.incentives-intro p { color: rgba(255,255,255,.75); font-size: 1.05rem; line-height: 1.75; margin: 0; }
+.incentive-card { position: relative; z-index: 1; display: flex; flex-direction: column; padding: clamp(1.75rem, 4vw, 3.25rem); color: #fff; background: rgba(255,255,255,.075); border: 1px solid rgba(255,255,255,.2); border-radius: 1.75rem; backdrop-filter: blur(6px); transition: transform .22s ease, background-color .22s ease, border-color .22s ease; }
+.incentive-card:hover { transform: translateY(-5px); background: rgba(255,255,255,.11); border-color: rgba(201,220,99,.65); }
+.incentive-card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,.18); }
+.incentive-card-top > span { color: var(--lime); font-size: .7rem; font-weight: 700; letter-spacing: .17em; }
+.incentive-card-top small { color: rgba(255,255,255,.58); font-size: .61rem; font-weight: 700; letter-spacing: .12em; text-align: right; text-transform: uppercase; }
+.incentive-card h3 { margin: clamp(2.5rem, 6vw, 4.5rem) 0 1rem; font-family: "Manrope", sans-serif; font-size: clamp(2rem, 3.5vw, 3.35rem); line-height: 1; letter-spacing: -.055em; }
+.incentive-card > p { max-width: 620px; color: rgba(255,255,255,.73); font-size: 1rem; line-height: 1.72; }
+.incentive-laws { display: grid; gap: .65rem; margin-top: auto; padding-top: 2rem; }
+.incentive-laws a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 0; color: #fff; border-top: 1px solid rgba(255,255,255,.18); font-size: .86rem; font-weight: 600; line-height: 1.45; text-decoration: none; transition: color .18s ease, padding-left .18s ease; }
+.incentive-laws a:hover, .incentive-laws a:focus-visible { color: var(--lime); padding-left: .35rem; }
+.incentive-laws a span { flex: 0 0 auto; color: var(--lime); font-size: 1rem; }
+.incentives-footer { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .85rem; color: rgba(255,255,255,.58); font-size: .64rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.incentives-footer i { width: 4px; height: 4px; border-radius: 50%; background: var(--lime); }
+
 .method-section { background: var(--petrol); color: #fff; }
 .light-label { color: var(--lime); }
 .method-intro { color: rgba(255,255,255,.7); font-size: 1.05rem; line-height: 1.75; }
@@ -239,6 +259,9 @@ a { color: inherit; }
   .section-pad { padding: 4.5rem 0; }
   .display-title { font-size: 2.65rem; }
   .expertise-card, .client-panel, .site-form { border-radius: 1.25rem; }
+  .incentive-card { border-radius: 1.25rem; }
+  .incentive-card-top { align-items: flex-start; flex-direction: column; }
+  .incentive-card-top small { text-align: left; }
   .method-grid { border-radius: 1.25rem; }
   .footer-bottom { flex-direction: column; }
 }

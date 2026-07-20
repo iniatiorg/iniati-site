@@ -111,6 +111,7 @@ export default function App() {
             <ul className="navbar-nav ms-auto me-xl-3 align-items-xl-center">
               <li className="nav-item"><a className="nav-link" href="#instituto" onClick={closeMenu}>O Instituto</a></li>
               <li className="nav-item"><a className="nav-link" href="#atuacao" onClick={closeMenu}>Atuação</a></li>
+              <li className="nav-item"><a className="nav-link" href="#incentivos" onClick={closeMenu}>Incentivos</a></li>
               <li className="nav-item"><a className="nav-link" href="#metodo" onClick={closeMenu}>Como fazemos</a></li>
               <li className="nav-item"><a className="nav-link" href="#valores" onClick={closeMenu}>Valores</a></li>
               <li className="nav-item"><a className="nav-link" href="#clientes" onClick={closeMenu}>Clientes</a></li>
@@ -196,6 +197,49 @@ export default function App() {
                 </article>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="incentivos" className="section-pad incentives-section section-anchor">
+        <div className="container-xxl px-3 px-lg-4 position-relative">
+          <div className="incentives-intro row g-4 g-lg-5 align-items-end mb-5">
+            <div className="col-lg-7">
+              <div className="section-label incentives-label">Fomento à inovação</div>
+              <h2 className="display-title text-white mb-0">Transforme incentivos em projetos estruturados de PD&amp;I.</h2>
+            </div>
+            <div className="col-lg-4 offset-lg-1">
+              <p>Apoiamos organizações na concepção, execução técnica e documentação de iniciativas de inovação alinhadas aos mecanismos fiscais aplicáveis.</p>
+            </div>
+          </div>
+
+          <div className="row g-3 g-lg-4">
+            <div className="col-lg-6">
+              <article className="incentive-card h-100">
+                <div className="incentive-card-top"><span>01</span><small>Tecnologia da informação e comunicação</small></div>
+                <h3>Lei da Informática</h3>
+                <p>Projetos de pesquisa, desenvolvimento e inovação relacionados a bens e serviços de tecnologia da informação e comunicação, no âmbito dos instrumentos estabelecidos pela legislação brasileira.</p>
+                <div className="incentive-laws" aria-label="Legislação da Lei da Informática">
+                  <a href="https://www.planalto.gov.br/ccivil_03/leis/l8248compilado.htm" target="_blank" rel="noreferrer">Lei nº 8.248, de 23 de outubro de 1991 <span aria-hidden="true">↗</span></a>
+                  <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13969.htm" target="_blank" rel="noreferrer">Lei nº 13.969, de 26 de dezembro de 2019 <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </div>
+
+            <div className="col-lg-6">
+              <article className="incentive-card h-100">
+                <div className="incentive-card-top"><span>02</span><small>Inovação tecnológica empresarial</small></div>
+                <h3>Lei do Bem</h3>
+                <p>Estruturação técnica de atividades de inovação para empresas elegíveis, com planejamento de projetos, organização de evidências e demonstração dos resultados alcançados.</p>
+                <div className="incentive-laws" aria-label="Legislação da Lei do Bem">
+                  <a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11196.htm" target="_blank" rel="noreferrer">Lei nº 11.196, de 21 de novembro de 2005 <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div className="incentives-footer mt-4">
+            <span>Estratégia</span><i aria-hidden="true" /><span>Execução técnica</span><i aria-hidden="true" /><span>Evidências</span><i aria-hidden="true" /><span>Impacto</span>
           </div>
         </div>
       </section>
