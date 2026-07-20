@@ -50,6 +50,8 @@ npm run build
 
 Os arquivos prontos ficarão em `dist/`. Eles podem ser copiados diretamente para qualquer hospedagem estática, sem Node.js ou processo de servidor no ambiente de produção.
 
+O domínio personalizado fica definido em `public/CNAME`. O Vite copia esse arquivo automaticamente para `dist/CNAME` em todas as compilações, tanto locais quanto no GitHub Actions. A pasta `dist/` é gerada novamente a cada build e, por isso, não deve ser versionada nem editada manualmente.
+
 Para conferir localmente a versão compilada:
 
 ```bash
