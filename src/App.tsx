@@ -92,7 +92,7 @@ export default function App() {
         <div className="container-xxl px-3 px-lg-4">
           <a className="navbar-brand brand-link" href="#inicio" onClick={closeMenu} aria-label="INIATI — início">
             <img className="brand-logo" src={logoUrl} alt="INIATI" width="220" height="66" fetchPriority="high" />
-            <span className="brand-name d-none d-sm-block">Instituto Nacional de Inovação Aplicada<br />à Tecnologia da Informação</span>
+            <span className="brand-name d-none d-sm-block">Instituto Nacional de Inovação Aplicada<br />em Tecnologia da Informação</span>
           </a>
 
           <div className="d-flex align-items-center gap-2 order-xl-3">
@@ -407,7 +407,7 @@ export default function App() {
       <footer className="site-footer">
         <div className="container-xxl px-3 px-lg-4">
           <div className="row g-4 align-items-start">
-            <div className="col-lg-5"><a className="footer-brand" href="#inicio"><img className="brand-logo" src={logoUrl} alt="INIATI" width="220" height="66" loading="lazy" /></a><p>Instituto Nacional de Inovação Aplicada à Tecnologia da Informação.</p></div>
+            <div className="col-lg-5"><a className="footer-brand" href="#inicio"><img className="brand-logo" src={logoUrl} alt="INIATI" width="220" height="66" loading="lazy" /></a><p>Instituto Nacional de Inovação Aplicada em Tecnologia da Informação.</p></div>
             <div className="col-6 col-lg-2 offset-lg-1"><h3>Navegue</h3><a href="#instituto">O Instituto</a><a href="#atuacao">Atuação</a><a href="#valores">Valores</a><a href="#clientes">Clientes</a><a href="#projetos">Projetos</a></div>
             <div className="col-6 col-lg-2"><h3>Conecte-se</h3><a href="#contato">Fale conosco</a><a href="#trabalhe">Trabalhe conosco</a><a href="mailto:contato@iniati.org.br">E-mail</a></div>
             <div className="col-lg-2"><h3>Atuação</h3><p>Centro-Oeste<br />Brasil</p></div>
