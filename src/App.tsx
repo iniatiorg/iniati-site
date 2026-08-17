@@ -109,7 +109,7 @@ export default function App() {
 
           <div className={`collapse navbar-collapse order-xl-2 ${menuOpen ? "show" : ""}`} id="mainMenu">
             <ul className="navbar-nav ms-auto me-xl-3 align-items-xl-center">
-              <li className="nav-item"><a className="nav-link" href="#instituto" onClick={closeMenu}>O Instituto</a></li>
+              <li className="nav-item"><a className="nav-link" href="#instituto" onClick={closeMenu}>Instituto</a></li>
               <li className="nav-item"><a className="nav-link" href="#atuacao" onClick={closeMenu}>Atuação</a></li>
               <li className="nav-item"><a className="nav-link" href="#incentivos" onClick={closeMenu}>Incentivos</a></li>
               <li className="nav-item"><a className="nav-link" href="#metodo" onClick={closeMenu}>Como fazemos</a></li>
