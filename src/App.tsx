@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 
-const logoUrl = `${import.meta.env.BASE_URL}iniati-logo.webp`;
+const logoUrl = `${import.meta.env?.BASE_URL ?? './'}iniati-logo.webp`;
 
 const areas = [
   {
@@ -60,13 +60,22 @@ function composeMailto(form: HTMLFormElement, kind: "contact" | "career") {
 }
 
 export default function App() {
-  const [theme, setTheme] = useState<"light" | "dark">(() => {
-    const saved = localStorage.getItem("iniati-theme");
-    if (saved === "dark" || saved === "light") return saved;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  });
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [menuOpen, setMenuOpen] = useState(false);
   const [sentForm, setSentForm] = useState<"contact" | "career" | null>(null);
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      const saved = localStorage.getItem("iniati-theme");
+      if (saved === "dark" || saved === "light") {
+        setTheme(saved);
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme("dark");
+      }
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-bs-theme", theme);
@@ -91,7 +100,7 @@ export default function App() {
       <nav className="navbar navbar-expand-xl fixed-top site-nav" aria-label="Navegação principal">
         <div className="container-xxl px-3 px-lg-4">
           <a className="navbar-brand brand-link" href="#inicio" onClick={closeMenu} aria-label="INIATI — início">
-            <img className="brand-logo" src={logoUrl} alt="INIATI" width="220" height="66" fetchPriority="high" />
+            <img className="brand-logo" src={logoUrl} alt="INIATI" width="220" height="66" />
             <span className="brand-name d-none d-sm-block">Instituto Nacional de Inovação Aplicada<br />em Tecnologia da Informação</span>
           </a>
 

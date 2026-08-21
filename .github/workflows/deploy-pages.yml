@@ -34,7 +34,7 @@ jobs:
         run: npm ci
 
       - name: Gerar site estático
-        run: npm run build
+        run: npm run validate
 
       - name: Enviar artefato estático
         uses: actions/upload-pages-artifact@v4

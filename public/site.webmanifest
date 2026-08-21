@@ -1,0 +1,18 @@
+{
+  "name": "INIATI — Instituto Nacional de Inovação Aplicada em Tecnologia da Informação",
+  "short_name": "INIATI",
+  "description": "Pesquisa, desenvolvimento e inovação aplicada em tecnologia da informação.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f4eddd",
+  "theme_color": "#0b4d55",
+  "icons": [
+    {
+      "src": "/iniati-logo.webp",
+      "sizes": "1600x480",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ]
+}

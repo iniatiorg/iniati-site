@@ -45,10 +45,13 @@ Para compilar e validar o site localmente:
 ```bash
 npm ci
 npm run lint
-npm run build
+npm run validate
 ```
 
 Os arquivos prontos ficarão em `dist/`. Eles podem ser copiados diretamente para qualquer hospedagem estática, sem Node.js ou processo de servidor no ambiente de produção.
+
+A validação também confirma os metadados SEO, o HTML pré-renderizado, o sitemap,
+o `robots.txt` e o `llms.txt` publicados.
 
 O domínio personalizado fica definido em `public/CNAME`. O Vite copia esse arquivo automaticamente para `dist/CNAME` em todas as compilações, tanto locais quanto no GitHub Actions. A pasta `dist/` é gerada novamente a cada build e, por isso, não deve ser versionada nem editada manualmente.
 
