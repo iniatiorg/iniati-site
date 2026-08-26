@@ -16,14 +16,17 @@ mise install
 Requer Node.js 22.13 ou superior.
 
 ```bash
-npm ci
-npm run dev
+make install
+make dev
 ```
+
+Execute `make help` para ver todos os atalhos. Os comandos equivalentes via npm
+continuam disponíveis.
 
 ## Gerar os arquivos estáticos
 
 ```bash
-npm run build
+make build
 ```
 
 O resultado é gravado em `dist/`. Essa pasta contém apenas HTML, CSS, JavaScript e imagens e pode ser publicada em qualquer servidor de arquivos estáticos.
@@ -43,9 +46,8 @@ No repositório do GitHub, acesse **Settings → Pages** e escolha **GitHub Acti
 Para compilar e validar o site localmente:
 
 ```bash
-npm ci
-npm run lint
-npm run validate
+make install
+make test
 ```
 
 Os arquivos prontos ficarão em `dist/`. Eles podem ser copiados diretamente para qualquer hospedagem estática, sem Node.js ou processo de servidor no ambiente de produção.
@@ -58,7 +60,7 @@ O domínio personalizado fica definido em `public/CNAME`. O Vite copia esse arqu
 Para conferir localmente a versão compilada:
 
 ```bash
-npm run preview
+make preview
 ```
 
 No repositório do GitHub, acesse **Settings → Pages** e escolha **Deploy from a branch**, e no diretório, escolha `/dist`. Depois disso, cada push para `main` publicará automaticamente o conteúdo de `dist/` no GitHub Pages.

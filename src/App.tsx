@@ -46,6 +46,37 @@ const steps = [
   ["04", "Transferir", "Levamos a tecnologia para a operação com documentação e continuidade."],
 ];
 
+const investmentDistribution = [
+  { value: "2,16%", label: "Projetos internos", color: "#63b3ed" },
+  { value: "0,4%", label: "FNDCT", color: "#f08a5d" },
+  { value: "0,32%", label: "ICTs públicas no Norte, Nordeste e Centro-Oeste", color: "#f6c453" },
+  { value: "0,32%", label: "ICTs privadas e públicas no Norte, Nordeste e Centro-Oeste", color: "#a78bfa" },
+  { value: "0,8%", label: "ICTs privadas e públicas nas demais regiões", color: "#5eead4" },
+];
+
+const investmentTypes = [
+  {
+    title: "Pesquisa Básica",
+    text: "Pesquisa experimental ou teórica voltada à aquisição de novos conhecimentos sobre os fundamentos de fenômenos e fatos observáveis, sem uma aplicação ou uso específico em vista.",
+  },
+  {
+    title: "Pesquisa Aplicada",
+    text: "Pesquisa original realizada para adquirir conhecimento, direcionada principalmente a um objetivo ou alvo prático específico.",
+  },
+  {
+    title: "Desenvolvimento Experimental",
+    text: "Trabalho sistemático baseado em conhecimento já existente para criar novos produtos ou processos, ou aperfeiçoar os que já existem.",
+  },
+  {
+    title: "Inovação Tecnológica",
+    text: "Implementação de um produto — bem ou serviço — ou de um processo tecnológico novo ou significativamente aprimorado.",
+  },
+  {
+    title: "Formação ou Capacitação Profissional",
+    text: "Formação técnica, superior ou de pós-graduação em tecnologia da informação e comunicação, computação, engenharias elétrica, eletrônica, mecatrônica e de telecomunicações, além de cursos correlatos reconhecidos pelo Ministério da Educação.",
+  },
+];
+
 function composeMailto(form: HTMLFormElement, kind: "contact" | "career") {
   const data = new FormData(form);
   const lines = Array.from(data.entries())
@@ -249,6 +280,55 @@ export default function App() {
 
           <div className="incentives-footer mt-4">
             <span>Estratégia</span><i aria-hidden="true" /><span>Execução técnica</span><i aria-hidden="true" /><span>Evidências</span><i aria-hidden="true" /><span>Impacto</span>
+          </div>
+
+          <div className="investment-panel">
+            <div className="row g-4 g-xl-5 align-items-center">
+              <div className="col-lg-5">
+                <div className="investment-kicker">Lei da Informática · distribuição do investimento</div>
+                <p className="investment-threshold">Faturamento de produtos habilitados <strong>acima de R$ 30 milhões</strong></p>
+                <div className="investment-total"><strong>4%</strong><span>podem ser direcionados para projetos de PD&amp;I</span></div>
+                <p className="investment-note">Desse montante, 2,16% correspondem a projetos internos, 0,4% ao Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) e 1,44% a ICTs.</p>
+              </div>
+              <div className="col-lg-7">
+                <figure className="investment-figure mb-0" aria-labelledby="investment-chart-title">
+                  <figcaption id="investment-chart-title" className="visually-hidden">Distribuição dos 4% destinados a projetos de pesquisa, desenvolvimento e inovação</figcaption>
+                  <div className="investment-chart" role="img" aria-label="Dos 4%: 2,16% para projetos internos; 0,4% para o FNDCT; 0,32% para ICTs públicas no Norte, Nordeste e Centro-Oeste; 0,32% para ICTs privadas e públicas no Norte, Nordeste e Centro-Oeste; e 0,8% para ICTs privadas e públicas nas demais regiões.">
+                    <div className="investment-chart-center"><span>Total</span><strong>4%</strong><small>em PD&amp;I</small></div>
+                  </div>
+                  <ol className="investment-legend">
+                    {investmentDistribution.map((item) => (
+                      <li key={`${item.value}-${item.label}`}>
+                        <i style={{ backgroundColor: item.color }} aria-hidden="true" />
+                        <span><strong>{item.value}</strong>{item.label}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="section-pad faq-section section-anchor">
+        <div className="container-xxl px-3 px-lg-4">
+          <div className="row g-4 g-lg-5">
+            <div className="col-lg-4">
+              <div className="section-label">FAQ · Lei da Informática</div>
+              <h2 className="display-title faq-title">Como investir em PD&amp;I com a Lei de Informática?</h2>
+              <p className="body-copy">Os investimentos podem contemplar diferentes formas de pesquisa, desenvolvimento, inovação e formação profissional.</p>
+            </div>
+            <div className="col-lg-7 offset-lg-1">
+              <div className="faq-list">
+                {investmentTypes.map((item, index) => (
+                  <details className="faq-item" key={item.title} open={index === 0}>
+                    <summary><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><i aria-hidden="true" /></summary>
+                    <p>{item.text}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

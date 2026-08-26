@@ -19,6 +19,8 @@ desenvolvimento e inovação tecnológica (PD&I) aplicados.
 - Engenharia de produto, software, dados e inteligência artificial.
 - Gestão de projetos de PD&I, com governança e rastreabilidade.
 - Apoio técnico a iniciativas de inovação relacionadas à Lei da Informática (Lei nº 8.248/1991, Lei nº 13.969/2019) e à Lei do Bem (Lei nº 11.196/2005).
+- Na Lei da Informática, 4% do faturamento de produtos habilitados acima de R$ 30 milhões podem ser direcionados a projetos de PD&I: 2,16% a projetos internos, 0,4% ao FNDCT e 1,44% a ICTs, conforme a distribuição regional apresentada no site.
+- As modalidades de investimento em PD&I apresentadas são pesquisa básica, pesquisa aplicada, desenvolvimento experimental, inovação tecnológica e formação ou capacitação profissional.
 - Centro-Oeste do Brasil como região de atuação prioritária, com foco em Mato Grosso do Sul, Mato Grosso, Goiás e Distrito Federal.
 
 ## Navegação
@@ -26,6 +28,7 @@ desenvolvimento e inovação tecnológica (PD&I) aplicados.
 - [Instituto](https://www.iniati.org.br/#instituto)
 - [Atuação](https://www.iniati.org.br/#atuacao)
 - [Incentivos à inovação](https://www.iniati.org.br/#incentivos)
+- [FAQ sobre a Lei da Informática](https://www.iniati.org.br/#faq)
 - [Método](https://www.iniati.org.br/#metodo)
 - [Valores](https://www.iniati.org.br/#valores)
 - [Projetos](https://www.iniati.org.br/#projetos)
