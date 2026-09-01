@@ -186,9 +186,9 @@ export default function App() {
                   <p>Da investigação científica<br />à aplicação tecnológica.</p>
                 </div>
                 <div className="matrix-axis">
-                  <div><span>Pesquisa</span><i /><b>01</b></div>
-                  <div><span>Engenharia</span><i /><b>02</b></div>
-                  <div><span>Mercado</span><i /><b>03</b></div>
+                  <div><span>Pesquisa</span></div>
+                  <div><span>Engenharia</span></div>
+                  <div><span>Mercado</span></div>
                 </div>
                 <div className="matrix-signature"><small>COMPETÊNCIAS CONECTADAS</small><b>ciência · engenharia · mercado</b></div>
               </div>
