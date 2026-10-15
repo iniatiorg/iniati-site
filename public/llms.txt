@@ -10,6 +10,8 @@ desenvolvimento e inovação tecnológica (PD&I) aplicados.
 
 - Site: https://www.iniati.org.br/
 - Contato: contato@iniati.org.br
+- [Política de Privacidade](https://www.iniati.org.br/politica-de-privacidade/) — tratamento de dados pessoais e direitos previstos na LGPD.
+- [Termos de Uso](https://www.iniati.org.br/termos-de-uso/) — condições de uso do site institucional.
 - Área de atuação: Brasil, com foco no Centro-Oeste brasileiro.
 - Projeto disponível: [Regulus](https://regulus.iniati.org.br/), plataforma de análise regulatória baseada no Standard Cost Model.
 

@@ -250,6 +250,7 @@ a { color: inherit; }
 .site-form .form-check-input { border-color: var(--line); }
 .site-form .form-check-input:checked { background-color: var(--emerald); border-color: var(--emerald); }
 .site-form .form-check-label { color: var(--ink-soft); font-size: .78rem; }
+.site-form .form-check-label a { color: inherit; text-underline-offset: 2px; }
 .form-help { color: var(--ink-soft); }
 .form-status { color: var(--emerald); font-size: .85rem; font-weight: 600; margin: 0; }
 
@@ -269,6 +270,24 @@ a { color: inherit; }
 .site-footer a:hover { color: var(--emerald); }
 .footer-bottom { margin-top: 4rem; padding-top: 1.25rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; color: var(--ink-soft); font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; }
 .footer-bottom a { margin: 0 !important; font-size: inherit !important; }
+.footer-legal { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.legal-home-link { color: var(--ink); font-size: .85rem; font-weight: 700; text-decoration: none; }
+.legal-home-link:hover { color: var(--emerald); }
+.legal-page { padding-top: 84px; }
+.legal-header { padding: clamp(5rem, 9vw, 8rem) 0 clamp(3rem, 6vw, 5rem); background: var(--cream-deep); }
+.legal-header h1 { max-width: 900px; margin: 1.25rem 0; font-family: "Manrope", sans-serif; font-size: clamp(2.75rem, 6vw, 5.5rem); line-height: 1.06; letter-spacing: -.06em; }
+.legal-header p { max-width: 700px; margin: 0 0 2rem; color: var(--ink-soft); font-size: clamp(1.05rem, 1.6vw, 1.25rem); line-height: 1.7; }
+.legal-header small { color: var(--ink-soft); font-size: .78rem; }
+.legal-layout { padding-top: clamp(3rem, 6vw, 5rem); padding-bottom: clamp(5rem, 9vw, 8rem); }
+.legal-content { max-width: 780px; }
+.legal-content section { padding: 1.75rem 0; border-bottom: 1px solid var(--line); }
+.legal-content section:first-child { padding-top: 0; }
+.legal-content section:last-child { border-bottom: 0; }
+.legal-content h2 { margin: 0 0 1rem; font-family: "Manrope", sans-serif; font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: -.035em; }
+.legal-content p { margin: 0 0 1rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.8; }
+.legal-content p:last-child { margin-bottom: 0; }
+.legal-content a { color: var(--emerald); text-underline-offset: 3px; }
+.legal-footer { padding-top: 3rem; }
 
 @media (max-width: 1199.98px) {
   .site-nav .navbar-collapse { position: absolute; top: 83px; left: 0; right: 0; background: var(--nav-bg); padding: 1rem; border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }

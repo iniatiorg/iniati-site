@@ -43,4 +43,18 @@ assert(
 );
 assert(read('llms.txt').includes('https://www.iniati.org.br/'), 'llms.txt must contain the canonical URL');
 
+for (const page of [
+  { path: 'politica-de-privacidade', title: 'Política de Privacidade', key: 'LGPD' },
+  { path: 'termos-de-uso', title: 'Termos de Uso', key: 'LGPD' },
+]) {
+  const url = `https://www.iniati.org.br/${page.path}/`;
+  const legalHtml = read(`${page.path}/index.html`);
+  assert(legalHtml.includes(`<link rel="canonical" href="${url}"`), `Missing canonical URL for ${page.path}`);
+  assert(legalHtml.includes(`<meta property="og:url" content="${url}"`), `Missing Open Graph URL for ${page.path}`);
+  assert(legalHtml.includes(`<h1>${page.title}</h1>`), `Missing rendered title for ${page.path}`);
+  assert(legalHtml.includes(page.key), `Missing LGPD reference for ${page.path}`);
+  assert(read('sitemap.xml').includes(`<loc>${url}</loc>`), `Missing sitemap URL for ${page.path}`);
+  assert(html.includes(`href="/${page.path}/"`), `Missing footer link for ${page.path}`);
+}
+
 console.log('Validated static SEO assets and structured data');
